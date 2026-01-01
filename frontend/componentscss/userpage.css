@@ -1,0 +1,125 @@
+/* components/UserPage.css */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.page-header h1 {
+    margin: 0;
+    color: var(--text-main);
+}
+
+.page-header p {
+    margin: 5px 0 0 0;
+    color: var(--text-muted);
+}
+
+.btn-add {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-add:hover {
+    background-color: var(--primary-hover);
+}
+
+/* Table Styling */
+.table-wrapper {
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    /* Ensures corners are rounded */
+}
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.custom-table th {
+    background-color: #f1f5f9;
+    padding: 15px;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.custom-table td {
+    padding: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: var(--text-main);
+    transition: background 0.2s;
+}
+
+.custom-table tbody tr {
+    cursor: pointer;
+}
+
+.custom-table tbody tr:hover td {
+    background-color: #f8fafc;
+}
+
+.font-bold {
+    font-weight: 600;
+}
+
+.table-category-badge {
+    background: #f1f5f9;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.view-link {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+
+.loader {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}
+
+/* Add these to your userpage.css */
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.category-filter {
+    padding: 10px 15px;
+    border: 1px solid #e2e8f0;
+    border-radius: var(--radius);
+    background-color: var(--white);
+    color: var(--text-main);
+    font-size: 0.9rem;
+    outline: none;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+}
+
+.category-filter:focus {
+    border-color: var(--primary-color);
+}
+
+/* Ensure the table looks consistent even when empty */
+.custom-table td[colSpan="4"] {
+    color: var(--text-muted);
+    font-style: italic;
+}
