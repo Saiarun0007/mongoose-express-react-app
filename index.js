@@ -5,6 +5,10 @@ const mongoose = require('mongoose');
 const Product = require('./products');
 const methodOverride = require('method-override');
 const { json } = require('stream/consumers');
+const morgan = require('morgan');
+
+// Connect to MongoDB
+
 
 
 mongoose.connect('mongodb://localhost:27017/formStand').then(() => {
@@ -26,6 +30,7 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(morgan('tiny'))
 
 const corsOptions = {
     // Use the exact origin of your React app
