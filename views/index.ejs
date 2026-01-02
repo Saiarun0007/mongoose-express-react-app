@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>products</title>
+</head>
+
+<body>
+    <h1>Welcome to the Products Page</h1>
+    <H2>
+        <%= category %> Products Available
+    </H2>
+    <ul>
+        <% for (let prod of products) { %>
+            <li>
+                <a href="/products/<%= prod._id %>">
+                    <%= prod.name %>
+                </a>
+            </li>
+            <% } %>
+    </ul>
+
+    <button onclick="location.href='/'">Add New Product</button>
+</body>
+
+
+
+</html>
